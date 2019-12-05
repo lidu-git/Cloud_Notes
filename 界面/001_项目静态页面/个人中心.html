@@ -1,0 +1,195 @@
+
+<!-- saved from url=(0036)http://localhost:8080/cloudnote/user -->
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>码云主页</title>
+<link href="./个人中心_files/note.css" rel="stylesheet">
+<link href="./个人中心_files/bootstrap.css" rel="stylesheet">
+<link href="./个人中心_files/sweetalert2.min.css" rel="stylesheet">
+<script src="./个人中心_files/jquery-3.3.1.min.js"></script>
+<script src="./个人中心_files/bootstrap.js"></script>
+<script src="./个人中心_files/sweetalert2.min.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="./个人中心_files/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="./个人中心_files/ueditor.all.js"></script>
+<style type="text/css">
+  body {
+       padding-top: 60px;
+       padding-bottom: 40px;
+       background: url(./个人中心_files/bg.gif) repeat;
+     }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="font-size:25px" href="http://localhost:8080/cloudnote/main">码云笔记</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="http://localhost:8080/cloudnote/main"><i class="glyphicon glyphicon-cloud"></i>&nbsp;主&nbsp;&nbsp;页</a></li>
+        <li><a href="http://localhost:8080/cloudnote/note"><i class="glyphicon glyphicon-pencil"></i>&nbsp;发表云记</a></li>
+        <li><a href="http://localhost:8080/cloudnote/type"><i class="glyphicon glyphicon-list"></i>&nbsp;类别管理</a></li>
+        <li><a href="http://localhost:8080/cloudnote/user"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</a>
+       
+      </li></ul>
+      <form class="navbar-form navbar-right" role="search" action="http://localhost:8080/cloudnote/main">
+        <div class="form-group">
+          <input type="hidden" name="act" value="searchKey">
+          <input type="text" name="val" class="form-control" placeholder="搜索云记">
+        </div>
+        <button type="submit" class="btn btn-default">查询</button>
+      </form>      
+    </div>
+  </div>
+</nav>
+<div class="container">
+	<div class="row-fluid">
+		<div class="col-md-3">
+			<div class="data_list">
+				<div class="data_list_title"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://localhost:8080/cloudnote/logout">退出</a></div>
+				<div class="userimg">
+					<img src="./个人中心_files/h2.jpg">
+				</div>
+				<div class="nick">我思故我在</div>
+				<div class="mood">(以后的你会感谢现在努力的你)</div>
+			</div>	
+			<div class="data_list">
+				<div class="data_list_title">
+					<span class="glyphicon glyphicon-calendar">
+					</span>&nbsp;云记日期 
+				</div>
+				
+				<div>
+					<ul class="nav nav-pills nav-stacked">
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchDate&amp;val=2016%E5%B9%B408%E6%9C%88&amp;valStr=2016%E5%B9%B408%E6%9C%88">2016年08月 <span class="badge">24</span></a></li>
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchDate&amp;val=2016%E5%B9%B407%E6%9C%88&amp;valStr=2016%E5%B9%B407%E6%9C%88">2016年07月 <span class="badge">1</span></a></li>
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchDate&amp;val=2016%E5%B9%B406%E6%9C%88&amp;valStr=2016%E5%B9%B406%E6%9C%88">2016年06月 <span class="badge">1</span></a></li>
+					 
+					</ul>						
+				</div>
+				
+			</div>		
+			<div class="data_list">
+				<div class="data_list_title">
+					<span class="glyphicon glyphicon-list-alt">
+					</span>&nbsp;云记类别 
+				</div>
+				
+				<div>
+					<ul class="nav nav-pills nav-stacked">
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchType&amp;val=5&amp;valStr=test">test <span class="badge">0</span></a></li>
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchType&amp;val=3&amp;valStr=%E5%B0%9A%E5%AD%A6%E5%A0%82%E7%AC%94%E8%AE%B0">码云笔记 <span class="badge">12</span></a></li>
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchType&amp;val=2&amp;valStr=%E6%8A%80%E6%9C%AF">技术 <span class="badge">5</span></a></li>
+					 
+						<li><a href="http://localhost:8080/cloudnote/main?act=searchType&amp;val=4&amp;valStr=%E8%80%81%E8%A3%B4%E8%AF%AD%E5%BD%95">java <span class="badge">9</span></a></li>
+					 
+					</ul>						
+				</div>
+				
+			</div>			
+		</div>
+	</div>
+	<div class="col-md-9">
+		
+
+<script>
+	function checkUser(){
+		var nickName=$('#nick').val();
+		if(nickName.length==0){
+			$("#msg").html("昵称不能为空,请核对！");
+			return false;
+		}
+		return true;	
+	}
+</script>
+<div class="data_list">
+	<div class="data_list_title"><span class="glyphicon glyphicon-edit"></span>&nbsp;个人中心 </div>
+	<div class="container-fluid">
+	  <div class="row" style="padding-top: 20px;">
+	  	<div class="col-md-8">
+	  		<form class="form-horizontal" method="post" action="http://localhost:8080/cloudnote/user?act=save" enctype="multipart/form-data" onsubmit="return checkUser();">
+			  <div class="form-group">
+			  	<input type="hidden" name="act" value="save">
+			    <label for="nickName" class="col-sm-2 control-label">昵称:</label>
+			    <div class="col-sm-3">
+			      <input class="form-control" name="nick" id="nickName" placeholder="昵称" value="我思故我在">
+			    </div>
+			    <label for="img" class="col-sm-2 control-label">头像:</label>
+			    <div class="col-sm-5">
+			    	<input type="file" id="img" name="img">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="mood" class="col-sm-2 control-label">心情:</label>
+			    <div class="col-sm-10">
+			      <textarea class="form-control" name="mood" id="mood" rows="3">以后的你会感谢现在努力的你</textarea>
+			    </div>
+			  </div>			 
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" id="btn" class="btn btn-success">修改</button>&nbsp;&nbsp;<span style="color:red" id="msg"></span>
+			    </div>
+			  </div>
+			</form>
+	  	</div>
+  		<div class="col-md-4"><img style="width:240px;height:180px" src="./个人中心_files/h2.jpg"></div>
+	  </div>
+	</div>	
+</div>
+<script>
+$(function(){
+	
+	var target=$("#nickName");
+	//验证昵称唯一
+	target.blur(
+			function(){
+				$("#btn").attr('disabled',false);
+				$("#msg").html('');
+				var value =target.val();
+				//不用ajax验证，没有填写或者与之前内容相同
+				if(value.length==0 ||value=='我思故我在'){
+					target.val('我思故我在');	
+					return ;
+				}
+				
+				//ajax验证
+				$.getJSON("user",{
+					act:'unique',
+					nick:value
+				},function(data){
+					if(data.resultCode==-1){
+						$("#msg").html(value+"此用户名已存在");
+						target.val('');
+						$("#btn").attr('disabled',true);	
+					}else{
+						$("#btn").attr('disabled',false);
+					}
+				});							
+			}
+		
+	);
+}	
+);
+</script>
+	</div>		
+</div>
+
+<div class="swal2-container"><div class="swal2-overlay" tabindex="-1"></div><div class="swal2-modal" style="display: none" tabindex="-1"><div class="swal2-icon swal2-error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="swal2-icon swal2-question">?</div><div class="swal2-icon swal2-warning">!</div><div class="swal2-icon swal2-info">i</div><div class="swal2-icon swal2-success"><span class="line tip"></span> <span class="line long"></span><div class="placeholder"></div> <div class="fix"></div></div><img class="swal2-image"><h2></h2><div class="swal2-content"></div><input class="swal2-input"><select class="swal2-select"></select><div class="swal2-radio"></div><label for="swal2-checkbox" class="swal2-checkbox"><input type="checkbox" id="swal2-checkbox"></label><textarea class="swal2-textarea"></textarea><div class="swal2-validationerror"></div><hr class="swal2-spacer"><button class="swal2-confirm">OK</button><button class="swal2-cancel">Cancel</button><span class="swal2-close">×</span></div></div></body></html>
